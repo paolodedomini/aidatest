@@ -1,0 +1,37 @@
+@import './fonts';
+@import './mixin/container';
+@import './mixin/column';
+@import './variabili';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'source-sans';
+  font-weight: normal;
+  color: $black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* SECTION CONTAINERS  */
+
+.main-site-container {
+  @include container(1640px);
+  display: block;
+  position: initial;
+}
+.main-head{
+  @include container();
+  justify-content: space-between;
+  z-index: 3;
+  padding:0 20px;
+}
