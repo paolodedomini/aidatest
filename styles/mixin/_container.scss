@@ -4,6 +4,7 @@
     $justify: unset,
     $align: unset,
     $direction: row) {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         position: relative;

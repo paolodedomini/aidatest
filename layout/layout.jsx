@@ -3,7 +3,7 @@ import Link from "next/link"
 import Header from '../components/header/header'
 function Layout({ children, logo, menu }) {
     return (
-        <div className="main-site-container">
+        <>
             <Head>
                 <link
                     rel="preload"
@@ -24,7 +24,7 @@ function Layout({ children, logo, menu }) {
             </main>
             <footer>
             </footer>
-        </div>
+        </>
     )
 }
 

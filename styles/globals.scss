@@ -24,7 +24,7 @@ a {
 
 /* SECTION CONTAINERS  */
 
-.main-site-container {
+.main-container {
   @include container(1640px);
   display: block;
   position: initial;
@@ -34,4 +34,8 @@ a {
   justify-content: space-between;
   z-index: 3;
   padding:0 20px;
+  margin-top: 1rem
+}
+section.blocco_0{
+  @include container(2033px);
 }

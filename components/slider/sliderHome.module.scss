@@ -1,0 +1,20 @@
+.wrapperSlider{
+    flex:1;
+   
+}
+
+.embla {
+    overflow: hidden;
+    height: 768px;
+
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+  }
+  .background{
+      position: absolute;
+  }
