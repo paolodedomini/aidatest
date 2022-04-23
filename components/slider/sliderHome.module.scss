@@ -15,6 +15,11 @@
     position: relative;
     flex: 0 0 100%;
   }
+  .wrapperText{
+
+  }
   .background{
       position: absolute;
+      top: 0;
+      z-index: -1;
   }

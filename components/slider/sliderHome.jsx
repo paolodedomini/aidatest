@@ -14,8 +14,10 @@ function SliderHome({ slides }) {
             return (
               <div key={item.imgs._id} className={style.embla__slide} >
 
-                <h1>{item.text?.title}</h1>
-                <h1>{item.text?.subtitle}</h1>
+                <div className={style.wrapperText}>
+                  <h1>{item.text?.title}</h1>
+                  <h1>{item.text?.subtitle}</h1>
+                </div>
                 <div className={style.background}>
                 <Image
                   
