@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['api.aidanetwork.org'],
   },
+  
 }
 
 module.exports = nextConfig

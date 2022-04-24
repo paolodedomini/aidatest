@@ -1,0 +1,14 @@
+@import "../../styles/_variabili";
+
+.readMore {
+  color: $yellow;
+  border: 3px solid $yellow;
+  display: inline-block;
+  padding: 1rem 3rem;
+  transition: all ease-in-out 0.3s;
+  font-size: 20px;
+  &:hover {
+    background-color: $yellow;
+    color: white;
+  }
+}

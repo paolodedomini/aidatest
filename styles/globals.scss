@@ -1,13 +1,13 @@
-@import './fonts';
-@import './mixin/container';
-@import './mixin/column';
-@import './variabili';
-
+@import "./fonts";
+@import "./mixin/container";
+@import "./mixin/column";
+@import "./variabili";
+@import "./mixin/_typo";
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'source-sans';
+  font-family: "source-sans";
   font-weight: normal;
   color: $black;
 }
@@ -20,22 +20,131 @@ a {
 * {
   box-sizing: border-box;
 }
+h2 {
+  @include titles("source-sans", 60px, $blue);
+  line-height: 70px;
+  margin: 0 0 1rem 0
+}
+h3 {
+  @include titles("source-sans", 40px, $blue);
+  line-height: 48px;
+  font-weight: normal;
+  margin: 0 0 1rem 0
+}
+p {
+  @include titles("source-sans", 20px, $black);
+  line-height: 30px;
+}
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  border: 0;
+  outline: 0;
+}
+
+/* ANCHOR swiper */
+.swiper-pagination {
+  span {
+    background-color: $yellow;
+    width: 110px;
+    border-radius: 0;
+  }
+}
+
+/* */
 
 /* SECTION CONTAINERS  */
 
+.full-width{
+  @include container();
+  width: 100%;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  &.fixed{
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    height: 100px
+  }
+}
 .main-container {
   @include container(1640px);
   display: block;
   position: initial;
 }
-.main-head{
+.main-head {
   @include container();
   justify-content: space-between;
   z-index: 3;
-  padding:0 20px;
-  margin-top: 1rem
+  padding: 0 20px;
+  margin-top: 1rem;
+}
+section.blocco_0,
+section.blocco_1,
+section.blocco_2 {
+  @include container();
+  z-index: 0;
 }
 section.blocco_0{
-  @include container(2033px);
+  max-width: 2048px;
+}
+section.blocco_1{
+  max-width: 1640px;
+  margin-top: 13rem;
+  margin-bottom: 12rem;
+  @include col(2);
+  &.reverse{
+    flex-direction: row-reverse;
+  }
+}
+
+section.blocco_2{
+  max-width: 1640px;
+  background-color: $bluedark;
+  padding: 4rem;
+  position: relative;
 }
