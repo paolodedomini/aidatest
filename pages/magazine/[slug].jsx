@@ -6,10 +6,10 @@ const MagazinePage = ({magazine, menu}) => {
     const router = useRouter()
     const { slug } = router.query
     const dataSingoloArticolo = magazine.data.find((item)=> item.slug === slug)
-
+console.log('router', router);
     return (
     
-    <Layout menu={menu}>
+    <Layout menu={menu} router={router}>
         <p>{dataSingoloArticolo.title}</p>
     </Layout>
     )

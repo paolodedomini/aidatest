@@ -129,7 +129,8 @@ button,
 section.blocco_0,
 section.blocco_1,
 section.blocco_2,
-section.blocco_6{
+section.blocco_6,
+section.breadcrumb{
   @include container();
   z-index: 0;
 }
@@ -157,4 +158,8 @@ section.blocco_6{
   max-width: 1640px;
   padding: 4rem;
   position: relative;
+}
+section.breadcrumb{
+  max-width: 1640px;
+  margin: 2rem auto 2rem auto;
 }

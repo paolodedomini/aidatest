@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import LogoHome from '../logoHome/logoHome'
 import Navbar from '../navbar/navbar'
 import MainButtons from '../navbar/mainButtons'
-
-function Header({menu }) {
+import BreadCrumb from '../breadCrumb/breadCrumb'
+function Header({menu, home, router }) {
     const [menuOpen, setMenuOpen] = useState(false)
     const [stickyClass, setStickyClass] = useState('relative');
 
@@ -32,7 +32,7 @@ function Header({menu }) {
                 </div> 
                 <Navbar menu={menu} menuOpen={menuOpen} />
             </div>
-                   
+              {!home && <BreadCrumb router={router} />}
         </header>
     )
 }

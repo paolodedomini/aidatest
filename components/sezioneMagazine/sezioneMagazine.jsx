@@ -1,6 +1,7 @@
 import ListEvents from "../listEvents/listEvents"
 import style from './sezioneMagazine.module.scss'
-import Link from 'next/link'
+
+
 import { ReadMore } from '../ui/ui'
 function SezioneMagazine({ dati, home }) {
   return (
@@ -11,7 +12,7 @@ function SezioneMagazine({ dati, home }) {
           reports and insights relevant to training in the AIDA academy and much more.</h3>
         {home && 
         <div style={{textAlign:'right'}}>
-          <Link href="/magazine/"><ReadMore text="Magazine" link="/magazine/" /></Link>
+         <ReadMore text="Magazine" link="/magazine/" />
         </div>}
       </div>
       <ListEvents dati={dati} />

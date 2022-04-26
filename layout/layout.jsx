@@ -1,7 +1,6 @@
 import Head from "next/head"
-import Link from "next/link"
 import Header from '../components/header/header'
-function Layout({ children, menu }) {
+function Layout({ children, menu, home, router }) {
     return (
         <>
             <Head>
@@ -18,7 +17,7 @@ function Layout({ children, menu }) {
                     crossOrigin=""
                 />
             </Head>
-            <Header  menu={menu} />
+            <Header  menu={menu} home={home} router={router} />
             <main >
                 {children}
             </main>

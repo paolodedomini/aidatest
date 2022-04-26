@@ -1,10 +1,13 @@
 import { menuData, magazineData } from '../../lib/queries'
 import Layout from '../../layout/layout'
+import { useRouter } from 'next/router'
 import SezioneMagazine from '../../components/sezioneMagazine/sezioneMagazine'
+
 function magazine({magazine, menu}) {
+    const router = useRouter()
     const datiBlocco6 = magazine.data
     return (
-        <Layout menu={menu}>
+        <Layout menu={menu} router={router}>
                 <SezioneMagazine dati={datiBlocco6} />
         </Layout>
     )

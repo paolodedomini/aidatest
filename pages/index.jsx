@@ -22,7 +22,7 @@ function Home({ dataHome, menu, magazine }) {
   console.log(magazine.data)
   
   return (
-    <Layout menu={menu}>
+    <Layout menu={menu} home={true}>
       <HomeSwiperSlider slides={slides} />
       <TestoImmagine dati={datiBlocco2} />
       <CallToAction dati={datiBlocco4}  />

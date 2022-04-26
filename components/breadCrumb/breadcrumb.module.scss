@@ -1,0 +1,19 @@
+@import '../../styles/_variabili';
+
+.breadCrumb{
+display: flex;
+margin-left: 1rem;
+a{
+    font-size: 20px;
+    color: $bluedark;
+    margin-left: 5px;
+    text-transform: capitalize;
+    &::after{
+        content: '/';
+        margin-left: 5px;
+    }
+    &:last-child{
+        color: $gray;
+    }
+}
+}
