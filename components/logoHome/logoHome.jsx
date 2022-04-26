@@ -1,9 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import { BASE_URL_IMMAGINI } from '../../lib/costanti'
 import style from './logoHome.module.scss'
 import { motion } from "framer-motion"
-function LogoHome({ logo, menuOpen }) {
+function LogoHome({ menuOpen }) {
     return (
         <div className={`logo-wrapper  `}>
             <div className="head-logo ">

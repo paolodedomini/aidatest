@@ -125,7 +125,8 @@ button,
 }
 section.blocco_0,
 section.blocco_1,
-section.blocco_2 {
+section.blocco_2,
+section.blocco_6{
   @include container();
   z-index: 0;
 }
@@ -147,4 +148,17 @@ section.blocco_2{
   background-color: $bluedark;
   padding: 4rem;
   position: relative;
+}
+
+section.blocco_6{
+  max-width: 1640px;
+  padding: 4rem;
+  position: relative;
+}
+.readmore{
+font-family: $fontPrimary;
+font-size: 30px;
+color: $blue;
+text-align: right;
+text-decoration: underline;
 }

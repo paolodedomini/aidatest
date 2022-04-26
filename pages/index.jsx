@@ -1,33 +1,33 @@
-import styles from '../styles/Home.module.scss'
-import { frontpageData, menuData } from '../lib/queries'
+import { frontpageData, menuData, magazineData } from '../lib/queries'
 import Layout from '../layout/layout'
-import SliderHome from '../components/slider/sliderHome'
 import HomeSwiperSlider from '../components/slider/swiperSlider'
 import TestoImmagine from '../components/testoImmagine/testoImmagine'
 import CallToAction from '../components/callToAction/callToAction'
-function Home({ dataHome, menu }) {
+import SezioneMagazine from '../components/sezioneMagazine/sezioneMagazine'
+function Home({ dataHome, menu, magazine }) {
   const slidesImages = dataHome.partials[0].resources
   const textSlides = dataHome.partials[0].payload.slides
-
   const datiBlocco2 = dataHome.partials[1]
   const datiBlocco3 = dataHome.partials[2]
   const datiBlocco4 = dataHome.partials[3]
   const datiBlocco5 = dataHome.partials[4]
+  const datiBlocco6 = magazine.data
 
   const slides = slidesImages.map((item, index) => {
     return {_id:item._id, imgs: item, text: textSlides[index] }
   })
+
   slides.pop()
   
+  console.log(magazine.data)
+  
   return (
-    <Layout logo={dataHome.mainImage.images[0].fullPath} menu={menu}>
-
+    <Layout menu={menu}>
       <HomeSwiperSlider slides={slides} />
-
-
       <TestoImmagine dati={datiBlocco2} />
       <CallToAction dati={datiBlocco4}  />
       <TestoImmagine dati={datiBlocco5} />
+      <SezioneMagazine dati={datiBlocco6} home={true} />
     </Layout>
   )
 }
@@ -35,16 +35,19 @@ function Home({ dataHome, menu }) {
 
 export async function getServerSideProps(context) {
 
-  const [dataHomeRes, menuRes] = await Promise.all([
+  const [dataHomeRes, menuRes, magRes] = await Promise.all([
     fetch(frontpageData('it')),
-    fetch(menuData('it'))
+    fetch(menuData('it')),
+    fetch(magazineData('it'))
+
   ]);
-  const [dataHome, menu] = await Promise.all([
+  const [dataHome, menu, magazine] = await Promise.all([
     dataHomeRes.json(),
-    menuRes.json()
+    menuRes.json(),
+    magRes.json()
   ]);
 
-  return { props: { dataHome, menu } };
+  return { props: { dataHome, menu, magazine } };
 
 
 }

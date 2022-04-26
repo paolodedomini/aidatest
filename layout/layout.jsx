@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import Header from '../components/header/header'
-function Layout({ children, logo, menu }) {
+function Layout({ children, menu }) {
     return (
         <>
             <Head>
@@ -18,7 +18,7 @@ function Layout({ children, logo, menu }) {
                     crossOrigin=""
                 />
             </Head>
-            <Header logo={logo} menu={menu} />
+            <Header  menu={menu} />
             <main >
                 {children}
             </main>

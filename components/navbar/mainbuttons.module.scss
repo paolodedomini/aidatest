@@ -1,3 +1,4 @@
+@import '../../styles/_variabili';
 .mainButtons{
     display: flex;
     list-style: none;
@@ -9,6 +10,7 @@
 .menubtn{
     cursor: pointer;
     font-size: 28px;
+    path{stroke: $blue;}
 }
 .closebtn{
     cursor: pointer;

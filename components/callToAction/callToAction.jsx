@@ -3,7 +3,6 @@ import { BASE_URL_IMMAGINI } from '../../lib/costanti'
 import Image from 'next/image'
 
 function CallToAction({ dati }) {
-  console.log(dati);
   const subtitle = dati.payload.subtitle
   const testi = dati.payload.text
   const link = { link: dati.payload.link, text: dati.payload.linkText }
@@ -17,9 +16,7 @@ function CallToAction({ dati }) {
       <div className={style.calltoaction}>
         <div className={style.ctaBtn}>
           <a href={link.link}>{link.text}</a>
-
         </div>
-
       </div>
       <div className={style.background}>
           <Image

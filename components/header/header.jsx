@@ -3,7 +3,7 @@ import LogoHome from '../logoHome/logoHome'
 import Navbar from '../navbar/navbar'
 import MainButtons from '../navbar/mainButtons'
 
-function Header({ logo, menu }) {
+function Header({menu }) {
     const [menuOpen, setMenuOpen] = useState(false)
     const [stickyClass, setStickyClass] = useState('relative');
 
@@ -26,7 +26,7 @@ function Header({ logo, menu }) {
             <div className={`full-width ${stickyClass}`}>
                 <div className={`main-container `}>
                     <div className="main-head">
-                        <LogoHome logo={logo} menuOpen={menuOpen} />
+                        <LogoHome  menuOpen={menuOpen} />
                         <MainButtons menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
                     </div>
                 </div> 
