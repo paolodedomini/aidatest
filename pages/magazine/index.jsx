@@ -1,5 +1,6 @@
-import { frontpageData, menuData, magazineData } from '../lib/queries'
-import Layout from '../layout/layout'
+import { menuData, magazineData } from '../../lib/queries'
+import Layout from '../../layout/layout'
+import SezioneMagazine from '../../components/sezioneMagazine/sezioneMagazine'
 function magazine({magazine, menu}) {
     const datiBlocco6 = magazine.data
     return (

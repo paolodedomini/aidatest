@@ -95,6 +95,9 @@ button,
   }
 }
 
+.logo-wrapper{
+  cursor: pointer;
+}  
 /* */
 
 /* SECTION CONTAINERS  */
@@ -154,11 +157,4 @@ section.blocco_6{
   max-width: 1640px;
   padding: 4rem;
   position: relative;
-}
-.readmore{
-font-family: $fontPrimary;
-font-size: 30px;
-color: $blue;
-text-align: right;
-text-decoration: underline;
 }

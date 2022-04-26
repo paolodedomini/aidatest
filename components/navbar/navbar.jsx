@@ -10,13 +10,15 @@ function Navbar({ menu, menuOpen }) {
       variants={aperturaMenu}
       animate={menuOpen ? 'rotate' : 'stop'}
       className={style.navbar}>
-      <div className={style.backImage}>
-        <Image
-          src="/images/back_main_menu.png"
-          width={819}
-          height={900}
-        />
-      </div>
+      
+        <div className={style.backImage}>
+          <Image
+            src="/images/back_main_menu.png"
+            width={819}
+            height={900}
+          />
+        </div>
+      
       <ul className={style.menu}>
         {Object.values(menu).map((item) => {
           return <li key={item._id}>{item.title}</li>

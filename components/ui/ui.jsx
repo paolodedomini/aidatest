@@ -1,12 +1,22 @@
 import style from './ui.module.scss'
-
-function ReadMore({link}) {
+import Link from 'next/link'
+function ReadMore({text, link}) {
   return (
-  <a className={style.readMore} href={link}>ReadMore</a>
+  <Link href={link}><a className={style.readMore}>{text}</a></Link>
   )
 }
+
+function GoToPageButton ({text, link}){
+return    <Link href={link}><div className={style.gotopage}>{text}</div></Link>
+}
+
 ReadMore.defaultProps = {
+  text:'Read More',
   link: "#"
 };
+GoToPageButton.defaultProps = {
+  link: "#",
+  text: "Go to page"
+};
 
-export {ReadMore}
+export {ReadMore, GoToPageButton}
