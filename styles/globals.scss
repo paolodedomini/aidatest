@@ -130,7 +130,8 @@ section.blocco_0,
 section.blocco_1,
 section.blocco_2,
 section.blocco_6,
-section.breadcrumb{
+section.breadcrumb,
+section.magazine-page{
   @include container();
   z-index: 0;
 }
@@ -161,5 +162,16 @@ section.blocco_6{
 }
 section.breadcrumb{
   max-width: 1640px;
-  margin: 2rem auto 2rem auto;
+  margin: 1rem auto 3rem auto;
+}
+section.magazine-page{
+  max-width: 1640px;
+  .col-1{
+    flex: 1;
+    max-width: 450px;
+  }
+  .col-2{
+    flex: 1;
+    margin-left: 0.5rem;
+  }
 }

@@ -17,7 +17,8 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "sass": "^1.50.1",
-    "swiper": "^8.1.4"
+    "swiper": "^8.1.4",
+    "unslugify": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "8.14.0",
