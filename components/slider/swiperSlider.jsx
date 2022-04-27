@@ -23,6 +23,7 @@ const HomeSwiperSlider = ({ slides }) => {
                 className={style.homeSlider}
                 modules={[Pagination]}
                 slidesPerView={1}
+                lazy={true}
                 pagination={pagination}
                 onSlideChange={() => console.log('slide change')}
             >

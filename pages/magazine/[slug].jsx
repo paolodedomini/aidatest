@@ -4,11 +4,11 @@ import Layout from '../../layout/layout'
 import { BASE_URL_IMMAGINI } from '../../lib/costanti'
 import Image from 'next/image'
 import style from './magazine.module.scss'
-
-const MagazinePage = ({menu, singlePost }) => {
+import { GrDocumentPerformance } from 'react-icons/gr'
+const MagazinePage = ({ menu, singlePost }) => {
   const router = useRouter()
   const { slug } = router.query
-  const dataPubblicazione = new Date(singlePost.startDate).toLocaleString('en', { day: 'numeric', month: 'long', year: 'numeric' })
+  const dataPubblicazione = new Date(singlePost.pubblicationDate).toLocaleString('en', { day: 'numeric', month: 'long', year: 'numeric' })
   console.log('articolo', singlePost);
   return (
 
@@ -34,17 +34,23 @@ const MagazinePage = ({menu, singlePost }) => {
             />}
           </div>
           <div className={style.specs}>
-            <div className={style.category}>
-              <sub>Category</sub>
-             {singlePost.category.name}
-            </div>
+            {singlePost.category &&
+              <div className={style.category}>
+                <span>Category</span>
+                {singlePost.category.name}
+              </div>}
+            {singlePost.highlightInfo.text &&
+              <div className={style.highlights}>
+                <GrDocumentPerformance />
+                <div className={style.info} dangerouslySetInnerHTML={{ __html: singlePost.highlightInfo.text }} />
+              </div>}
           </div>
         </div>
         <div className="col-2">
           <div className={style.titoli}>
             <h2>
-              <sub className={style.data}>{dataPubblicazione}</sub>
-              {singlePost.name}
+              <span className={style.data}>{dataPubblicazione}</span>
+              {singlePost.title}
             </h2>
           </div>
           <div className={style.corpoTesto}>
@@ -60,18 +66,18 @@ const MagazinePage = ({menu, singlePost }) => {
 
 
 export async function getServerSideProps(context) {
-const {slug} = context.query
+  const { slug } = context.query
   const [menuRes, postRes] = await Promise.all([
     fetch(menuData('it')),
-    fetch(singoloPost('en', 'workshop-7th-aida-international-meeting-day-4-uveitis-and-scleritis'))
+    fetch(singoloPost('en', slug))
 
   ]);
-  const [menu,  singlePost] = await Promise.all([
+  const [menu, singlePost] = await Promise.all([
     menuRes.json(),
     postRes.json()
   ]);
-const x = context.query
-  return { props: { menu, singlePost } };
+  const x = context.query
+  return { props: { menu, singlePost, slug } };
 
 
 }

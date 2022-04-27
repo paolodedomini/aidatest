@@ -4,6 +4,8 @@ import HomeSwiperSlider from '../components/slider/swiperSlider'
 import TestoImmagine from '../components/testoImmagine/testoImmagine'
 import CallToAction from '../components/callToAction/callToAction'
 import SezioneMagazine from '../components/sezioneMagazine/sezioneMagazine'
+import { FadeInWhenVisible } from '../lib/animations'
+
 function Home({ dataHome, menu, magazine }) {
   const slidesImages = dataHome.partials[0].resources
   const textSlides = dataHome.partials[0].payload.slides
@@ -14,20 +16,28 @@ function Home({ dataHome, menu, magazine }) {
   const datiBlocco6 = magazine.data
 
   const slides = slidesImages.map((item, index) => {
-    return {_id:item._id, imgs: item, text: textSlides[index] }
+    return { _id: item._id, imgs: item, text: textSlides[index] }
   })
 
   slides.pop()
-  
-  console.log(magazine.data)
-  
+
+
+
   return (
     <Layout menu={menu} home={true}>
       <HomeSwiperSlider slides={slides} />
-      <TestoImmagine dati={datiBlocco2} />
-      <CallToAction dati={datiBlocco4}  />
-      <TestoImmagine dati={datiBlocco5} />
-      <SezioneMagazine dati={datiBlocco6} home={true} />
+      <FadeInWhenVisible>
+        <TestoImmagine dati={datiBlocco2} />
+      </FadeInWhenVisible>
+      <FadeInWhenVisible>
+        <CallToAction dati={datiBlocco4} />
+      </FadeInWhenVisible>
+      <FadeInWhenVisible>
+        <TestoImmagine dati={datiBlocco5} />
+      </FadeInWhenVisible>
+      <FadeInWhenVisible>
+        <SezioneMagazine dati={datiBlocco6} home={true} />
+      </FadeInWhenVisible>
     </Layout>
   )
 }
