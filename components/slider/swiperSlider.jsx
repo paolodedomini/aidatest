@@ -2,6 +2,7 @@ import Image from 'next/image'
 import 'swiper/css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import "swiper/css/lazy";
 import style from './sliderHome.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Lazy } from "swiper";
@@ -20,7 +21,7 @@ const HomeSwiperSlider = ({ slides }) => {
     return (
         <section className='blocco_0'>
             <Swiper
-                className={style.homeSlider}
+                className={`${style.homeSlider}`}
                 modules={[Pagination, Lazy]}
                 slidesPerView={1}
                 lazy={true}
@@ -49,6 +50,7 @@ const HomeSwiperSlider = ({ slides }) => {
                                     {item.imgs.images[1] &&
                                         <div className={style.imageOver}>
                                             <Image
+                                                className="swiper-lazy"
                                                 src={`${BASE_URL_IMMAGINI}${item.imgs.images[1].fullPath}`}
                                                 width={1033}
                                                 height={900}
@@ -58,6 +60,8 @@ const HomeSwiperSlider = ({ slides }) => {
                                             />
                                         </div>}
                                 </div>
+                                
+                                <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
                             </SwiperSlide>
                         </div>
 

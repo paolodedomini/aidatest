@@ -87,6 +87,9 @@ button,
 }
 
 /* ANCHOR swiper */
+.swiper-lazy-preloader-black {
+  --swiper-preloader-color: #7586aa!important;
+}
 .swiper-pagination {
   span {
     background-color: $yellow;
