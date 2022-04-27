@@ -4,7 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import style from './sliderHome.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper";
+import { Pagination, Lazy } from "swiper";
 import { BASE_URL_IMMAGINI } from '../../lib/costanti'
 
 
@@ -21,7 +21,7 @@ const HomeSwiperSlider = ({ slides }) => {
         <section className='blocco_0'>
             <Swiper
                 className={style.homeSlider}
-                modules={[Pagination]}
+                modules={[Pagination, Lazy]}
                 slidesPerView={1}
                 lazy={true}
                 pagination={pagination}
