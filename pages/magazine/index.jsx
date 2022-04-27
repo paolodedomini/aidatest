@@ -3,7 +3,7 @@ import Layout from '../../layout/layout'
 import { useRouter } from 'next/router'
 import SezioneMagazine from '../../components/sezioneMagazine/sezioneMagazine'
 
-function magazine({magazine, menu}) {
+function Magazine({magazine, menu}) {
     const router = useRouter()
     const datiBlocco6 = magazine.data
     return (
@@ -27,4 +27,4 @@ export async function getServerSideProps(context) {
 
 
 }
-export default magazine
+export default Magazine

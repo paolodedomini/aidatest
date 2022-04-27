@@ -14,7 +14,7 @@ function BreadCrumb({path, router}){
         <section className='breadcrumb'>
           <div className={style.breadCrumb}>
               {pathArray.map((item)=>{
-                return  <Link href={item.href}>{item.breadcrumb}</Link>})
+                return  <Link key={item.href} href={item.href}>{item.breadcrumb}</Link>})
               }
           </div>
         </section>
