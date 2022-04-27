@@ -41,7 +41,7 @@ export const AccordionWrapper = () => {
   const [expanded, setExpanded] = useState(0);
 
   return accordionIds.map((i) => (
-    <Accordion i={i} expanded={expanded} setExpanded={setExpanded} />
+    <Accordion key={i} i={i} expanded={expanded} setExpanded={setExpanded} />
   ));
 };
 
