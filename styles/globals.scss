@@ -85,7 +85,17 @@ button,
   border: 0;
   outline: 0;
 }
-
+header{
+  
+  &.open{
+ 
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+  
+  }
+}
 /* ANCHOR swiper */
 .swiper-lazy-preloader-black {
   --swiper-preloader-color: #7586aa!important;

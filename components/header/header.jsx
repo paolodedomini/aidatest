@@ -8,18 +8,18 @@ function Header({menu, home, router }) {
     const [stickyClass, setStickyClass] = useState('relative');
 
     useEffect(() => {
-        window.addEventListener('scroll', stickNavbar());
+        window.addEventListener('scroll', stickNavbar);
 
         return () => {
-            window.removeEventListener('scroll', stickNavbar());
+            window.removeEventListener('scroll', stickNavbar);
         };
     }, []);
- 
-    const stickNavbar = (isMenuOpen) => {
+
+    const stickNavbar = () => {
         if (window !== undefined) {
             let windowHeight = window.scrollY;
             windowHeight > 100 ? setStickyClass('fixed') : setStickyClass('');
-          
+            
         }
     };
     return (
