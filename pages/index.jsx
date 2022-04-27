@@ -25,6 +25,7 @@ function Home({ dataHome, menu, magazine }) {
 
   return (
     <Layout menu={menu} home={true}>
+
       <HomeSwiperSlider slides={slides} />
       <FadeInWhenVisible>
         <TestoImmagine dati={datiBlocco2} />
