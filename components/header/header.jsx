@@ -23,6 +23,7 @@ function Header({menu, home, router }) {
         }
     };
     return (
+        <>
         <header className={`${menuOpen ? 'open' : ''}`}>
             <div className={`full-width ${stickyClass}`}>
                 <div className={`main-container `}>
@@ -33,8 +34,10 @@ function Header({menu, home, router }) {
                 </div> 
                 <Navbar menu={menu} menuOpen={menuOpen} />
             </div>
-              {!home && <BreadCrumb router={router} />}
+            
         </header>
+        {!home && <BreadCrumb router={router} />}
+        </>
     )
 }
 
