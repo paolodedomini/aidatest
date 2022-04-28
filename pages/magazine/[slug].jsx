@@ -1,10 +1,13 @@
 import { menuData, magazineData, singoloPost } from '../../lib/queries'
 import { useRouter } from 'next/router'
 import Layout from '../../layout/layout'
+import CallToAction from '../../components/callToAction/callToAction'
 import { BASE_URL_IMMAGINI } from '../../lib/costanti'
 import Image from 'next/image'
 import style from './magazine.module.scss'
 import { GrDocumentPerformance } from 'react-icons/gr'
+
+
 const MagazinePage = ({ menu, singlePost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -60,6 +63,12 @@ const MagazinePage = ({ menu, singlePost }) => {
           </div>
         </div>
       </section>
+      <CallToAction
+        title="Subscribe newsletter"
+        testi="Please subscribe to the newsletter to keep updated on our initiatives or contact us if you are willing to join the Network."
+        linkBtn="#"
+        textBtn="Subscribe"
+      />
     </Layout>
   )
 }

@@ -12,6 +12,7 @@ function Home({ dataHome, menu, magazine }) {
   const datiBlocco2 = dataHome.partials[1]
   const datiBlocco3 = dataHome.partials[2]
   const datiBlocco4 = dataHome.partials[3]
+
   const datiBlocco5 = dataHome.partials[4]
   const datiBlocco6 = magazine.data
 
@@ -21,7 +22,13 @@ function Home({ dataHome, menu, magazine }) {
 
   slides.pop()
 
-
+const datiCallToAction = {
+   title : datiBlocco4.payload.subtitle,
+   testi : datiBlocco4.payload.text,
+   textBtn: datiBlocco4.payload.linkText,
+   linkBtn :'#',
+   immagine : datiBlocco4.resources[0].images[0].fullPath
+}
 
   return (
     <Layout menu={menu} home={true}>
@@ -31,7 +38,13 @@ function Home({ dataHome, menu, magazine }) {
         <TestoImmagine dati={datiBlocco2} />
       </FadeInWhenVisible>
       <FadeInWhenVisible>
-        <CallToAction dati={datiBlocco4} />
+        <CallToAction 
+        title={datiCallToAction.title}
+        testi={datiCallToAction.testi}
+        textBtn={datiCallToAction.textBtn}
+        linkBtn={datiCallToAction.linkBtn}
+        immagine={datiCallToAction.immagine} />
+
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <TestoImmagine dati={datiBlocco5} />
