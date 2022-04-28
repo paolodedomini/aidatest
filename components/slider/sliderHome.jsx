@@ -46,6 +46,7 @@ function SliderHome({ slides }) {
                     blurDataURL='/images/back_main_menu.png'
                     placeholder="blur"
                     layout='intrinsic'
+                    priority
                   />
                 </div>
                 {item.imgs.images[1] &&
@@ -57,6 +58,7 @@ function SliderHome({ slides }) {
                       blurDataURL='/images/back_main_menu.png'
                       placeholder="blur"
                       layout='intrinsic'
+                      priority
                     />
                   </div>}
               </div>
