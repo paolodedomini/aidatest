@@ -93,7 +93,10 @@ header {
   width: 100%;
 }
 main {
-  margin-top: 7rem;
+  margin-top: 1rem;
+  &.home{
+    margin-top: 7rem;
+  }
 }
 /* ANCHOR swiper */
 .swiper-lazy-preloader-black {
@@ -150,7 +153,8 @@ section.blocco_1,
 section.blocco_2,
 section.blocco_6,
 section.breadcrumb,
-section.magazine-page {
+section.magazine-page,
+footer {
   @include container();
   z-index: 0;
 
@@ -210,4 +214,9 @@ section.magazine-page {
     margin-left: 1.5rem;
     max-width: 900px;
   }
+}
+footer{
+  margin: 2rem 0;
+  flex-direction: column;
+  align-items: center;
 }

@@ -1,0 +1,25 @@
+@import '../../styles/variabili';
+.footermenu{
+    .wrapperlogo{
+
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        li{
+            font-size: 20px;
+            font-weight: bold;
+            color: $bluedark;
+            margin: 10px;
+        }
+    }
+
+}
+
+.info{
+    text-align: center;
+    color: $bluedark;
+    font-size: 18px;
+    font-weight: 600;
+}

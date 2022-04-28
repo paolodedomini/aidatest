@@ -1,6 +1,7 @@
 import Head from "next/head"
 import {motion} from 'framer-motion'
 import Header from '../components/header/header'
+import Footer from "../components/footer/footer"
 function Layout({ children, menu, home, router }) {
     
     const variants = {
@@ -27,6 +28,7 @@ function Layout({ children, menu, home, router }) {
             </Head>
             <Header  menu={menu} home={home} router={router} />
             <motion.main 
+            className={`${home ? 'home' :''}`}
             variants={variants} // Pass the variant object into Framer Motion 
             initial="hidden" // Set the initial state to variants.hidden
             animate="enter" // Animated state to variants.enter
@@ -35,8 +37,7 @@ function Layout({ children, menu, home, router }) {
             >
                 {children}
             </motion.main>
-            <footer>
-            </footer>
+       <Footer menu={menu} />
         </>
     )
 }
