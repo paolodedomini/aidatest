@@ -130,6 +130,7 @@ main {
   @include container(1640px);
   display: block;
   position: initial;
+
 }
 .main-head {
   @include container();
@@ -137,6 +138,9 @@ main {
   z-index: 3;
   padding: 0 20px;
   margin-top: 1rem;
+  @media screen and ($tablet) {
+    flex-direction: row;
+}
 }
 section.blocco_0,
 section.blocco_1,
@@ -146,9 +150,13 @@ section.breadcrumb,
 section.magazine-page {
   @include container();
   z-index: 0;
+  
 }
 section.blocco_0 {
   max-width: 2048px;
+  @media screen and ($tablet) {
+    flex-direction: row;
+}
 }
 section.blocco_1 {
   max-width: 1640px;
@@ -157,6 +165,9 @@ section.blocco_1 {
   @include col(2);
   &.reverse {
     flex-direction: row-reverse;
+    @media screen and ($tablet) {
+      flex-direction: column;
+  }
   }
 }
 

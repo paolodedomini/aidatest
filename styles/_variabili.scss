@@ -4,4 +4,11 @@ $yellow: #FEC86F;
 $yellowdark: #c38740;
 $black: #292929;
 $gray: rgb(113, 113, 113);
-$fontPrimary: 'source-sans'
+// fonts
+$fontPrimary: 'source-sans';
+
+//media queries
+$phone: 'max-width: 440px';
+$tablet:'max-width: 768px';
+$large: 'max-width: 1024px';
+$desktop: 'max-width: 1280px';

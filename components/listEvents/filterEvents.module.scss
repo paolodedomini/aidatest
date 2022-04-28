@@ -2,6 +2,7 @@
 
 .filtribox {
   display: flex;
+  flex-wrap: wrap;
   li {
     margin: 1rem;
     border: 2px solid $bluedark;

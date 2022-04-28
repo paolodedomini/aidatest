@@ -1,3 +1,4 @@
+@import '../variabili';
 @mixin col($numeroColonne: 5, $minwidth: auto, $pads: 0, $margs: 0) {
   .col__#{$numeroColonne} {
     flex-basis: (100% / $numeroColonne);
@@ -5,6 +6,7 @@
     padding: $pads;
     margin: $margs;
     position: relative;
+
 
     &:first-child {
       margin-left: 0;
@@ -23,6 +25,7 @@
     padding: $pads;
     margin: $margs;
     position: relative;
+
     &:first-child {
       margin-left: 0;
     }

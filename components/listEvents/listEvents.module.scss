@@ -10,6 +10,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    @media scree and($tablet){
+
+    }
   }
 }
 
@@ -23,7 +27,9 @@
   cursor: pointer;
   color: $bluedark;
   transition: all ease-in-out 0.2s;
-
+@media screen and($tablet){
+  flex-wrap: wrap;
+}
   &:hover {
     color: $blue;
     background-color: aliceblue;
@@ -39,9 +45,13 @@
 
   .title {
     font-size: 20px;
+    flex-shrink: 1;
   }
   .data {
     font-size: 20px;
+    width: 223px;
+    text-align: right;
+    flex-shrink: 0;
     span {
       font-size: 13px;
       background: aliceblue;
