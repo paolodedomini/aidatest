@@ -1,10 +1,12 @@
 import { frontpageData, menuData, magazineData } from '../lib/queries'
 import Layout from '../layout/layout'
-import HomeSwiperSlider from '../components/slider/swiperSlider'
 import TestoImmagine from '../components/testoImmagine/testoImmagine'
 import CallToAction from '../components/callToAction/callToAction'
 import SezioneMagazine from '../components/sezioneMagazine/sezioneMagazine'
 import { FadeInWhenVisible } from '../lib/animations'
+import dynamic from 'next/dynamic'
+
+const HomeSwiperSlider = dynamic(() => import('../components/slider/swiperSlider'))
 
 function Home({ dataHome, menu, magazine }) {
   const slidesImages = dataHome.partials[0].resources
