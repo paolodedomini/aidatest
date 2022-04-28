@@ -1,12 +1,18 @@
 import Link from 'next/link'
 import { GrLinkNext } from "react-icons/gr"
 import { BASE_URL_IMMAGINI } from '../../lib/costanti'
+import {motion} from 'framer-motion'
 import Image from 'next/image'
 
 function Cards({ listaDatiFiltrati, style }) {
   const sliced = listaDatiFiltrati.slice(0, 15)
   return (
-    <ul className={style.cardWrapper}>
+    <motion.ul
+    key="cards"
+    initial={{ opacity: 0, top:'15px' }}
+    animate={{ opacity: 1, top:0 }}
+    exit={{ opacity: 0, top:'15px' }}
+    className={style.cardWrapper}>
       {sliced.map((item) => {
         const dataPubblicazione = new Date(item.pubblicationDate).toLocaleString('en', { day: 'numeric', month: 'long', year: 'numeric' })
         return (
@@ -48,7 +54,7 @@ function Cards({ listaDatiFiltrati, style }) {
         )
       })}
 
-    </ul>
+    </motion.ul>
   )
 }
 

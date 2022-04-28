@@ -1,10 +1,15 @@
 import Link from 'next/link'
 import { GrLinkNext } from "react-icons/gr"
-
+import{motion} from 'framer-motion'
 function Lista({ listaDatiFiltrati, style }) {
     const sliced = listaDatiFiltrati.slice(0, 15)
     return (
-        <ul>
+        <motion.ul
+        key="lista"
+        initial={{ opacity: 0, top:'15px' }}
+        animate={{ opacity: 1, top:0 }}
+        exit={{ opacity: 0, top:'15px' }}
+      >
             {listaDatiFiltrati.map((item) => {
                 const dataPubblicazione = new Date(item.pubblicationDate).toLocaleString('en', { day: 'numeric', month: 'long', year: 'numeric' })
                 return (
@@ -17,7 +22,7 @@ function Lista({ listaDatiFiltrati, style }) {
                 )
             })}
 
-        </ul>
+        </motion.ul>
     )
 }
 

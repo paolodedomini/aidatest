@@ -5,6 +5,7 @@
   ul {
     list-style: none;
     padding: 0;
+    position: relative;
   }
   .listaheader {
     display: flex;
@@ -30,6 +31,8 @@
   &:hover {
     color: $blue;
     background-color: aliceblue;
+
+    border-left: 10px solid $bluedark;
     .data {
       span {
         background-color: $yellow;
@@ -71,6 +74,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
+  position: relative;
   .card {
     max-width: 450px;
     height: 450px;

@@ -4,6 +4,7 @@ import FiltersEvents from './filtersEvents'
 import Lista from './lista'
 import ViewSwitcher from './viewSwitcher'
 import Cards from './cards'
+import {motion, AnimatePresence} from 'framer-motion'
 function ListEvents({ dati }) {
   const [currentFilter, setCurrrentFilter] = useState([])
   const [listaDatiFiltrati, setListadatiFiltrati] = useState(dati)
@@ -28,11 +29,14 @@ function ListEvents({ dati }) {
         <FiltersEvents dati={dati} currentFilter={currentFilter} setCurrrentFilter={setCurrrentFilter} />
         <ViewSwitcher switchCard={switchCard} setSwitchCard={setSwitchCard} />
       </div>
-      {switchCard ? 
-      <Cards listaDatiFiltrati={listaDatiFiltrati} style={style} />
-      :
-      <Lista listaDatiFiltrati={listaDatiFiltrati} style={style}/>
-}    </div>
+      <AnimatePresence>
+        {switchCard ?
+        <Cards listaDatiFiltrati={listaDatiFiltrati} style={style} />
+        :
+        <Lista listaDatiFiltrati={listaDatiFiltrati} style={style}/>
+        }
+      </AnimatePresence>   
+      </div>
   )
 }
 
