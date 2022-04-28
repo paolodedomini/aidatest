@@ -22,13 +22,13 @@ function Home({ dataHome, menu, magazine }) {
 
   slides.pop()
 
-const datiCallToAction = {
-   title : datiBlocco4.payload.subtitle,
-   testi : datiBlocco4.payload.text,
-   textBtn: datiBlocco4.payload.linkText,
-   linkBtn :'#',
-   immagine : datiBlocco4.resources[0].images[0].fullPath
-}
+  const datiCallToAction = {
+    title: datiBlocco4.payload.subtitle,
+    testi: datiBlocco4.payload.text,
+    textBtn: datiBlocco4.payload.linkText,
+    linkBtn: '#',
+    immagine: datiBlocco4.resources[0].images[0].fullPath
+  }
 
   return (
     <Layout menu={menu} home={true}>
@@ -38,12 +38,12 @@ const datiCallToAction = {
         <TestoImmagine dati={datiBlocco2} />
       </FadeInWhenVisible>
       <FadeInWhenVisible>
-        <CallToAction 
-        title={datiCallToAction.title}
-        testi={datiCallToAction.testi}
-        textBtn={datiCallToAction.textBtn}
-        linkBtn={datiCallToAction.linkBtn}
-        immagine={datiCallToAction.immagine} />
+        <CallToAction
+          title={datiCallToAction.title}
+          testi={datiCallToAction.testi}
+          textBtn={datiCallToAction.textBtn}
+          linkBtn={datiCallToAction.linkBtn}
+          immagine={datiCallToAction.immagine} />
 
       </FadeInWhenVisible>
       <FadeInWhenVisible>

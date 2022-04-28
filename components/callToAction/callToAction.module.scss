@@ -30,9 +30,15 @@
   background-color: $bluedark;
   transition: all ease-in-out 0.3s;
   cursor: pointer;
+  a {
+    color: $yellow;
+    transition: all ease-in-out 0.3s;
+  }
   &:hover {
     background-color: $yellow;
-    color: white;
+    a {
+      color: white;
+    }
   }
   &::after {
     content: "";
