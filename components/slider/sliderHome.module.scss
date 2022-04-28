@@ -7,14 +7,7 @@
 .homeSlider {
     overflow: hidden;
     height: 42vw;
-
-    @media screen and ($large) {
-        height: 400px;
-    }
-
-    @media screen and ($tablet) {
-        height: 300px;
-    }
+    @media screen and($phone){height: 200px;}
 }
 
 .innerSlide {
@@ -70,8 +63,9 @@
         margin: 0 0 1rem 0;
 
         @media screen and ($tablet) {
-            font-size: 40px;
+            font-size: 30px;
             margin: 0;
+            line-height: 1;
         }
     }
 
@@ -79,10 +73,11 @@
         font-size: 40px;
         color: white;
         margin: 0;
-        font-size: 70px;
+
 
         @media screen and ($tablet) {
-            font-size: 30px;
+            font-size: 20px;
+            line-height: 1;
         }
     }
 }

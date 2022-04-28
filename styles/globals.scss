@@ -104,6 +104,9 @@ main {
     background-color: $yellow;
     width: 110px;
     border-radius: 0;
+    @media screen and ($tablet) {
+      width: 50px;
+  }
   }
 }
 
@@ -150,7 +153,7 @@ section.breadcrumb,
 section.magazine-page {
   @include container();
   z-index: 0;
-  
+
 }
 section.blocco_0 {
   max-width: 2048px;
@@ -162,6 +165,9 @@ section.blocco_1 {
   max-width: 1640px;
   margin-top: 13rem;
   margin-bottom: 12rem;
+  @media screen and ($tablet) {
+    margin: 2rem 0;
+}
   @include col(2);
   &.reverse {
     flex-direction: row-reverse;
@@ -182,6 +188,9 @@ section.blocco_6 {
   max-width: 1640px;
   padding: 4rem;
   position: relative;
+@media screen and ($tablet){
+  padding: 20px;
+}
 }
 section.breadcrumb {
   max-width: 1640px;

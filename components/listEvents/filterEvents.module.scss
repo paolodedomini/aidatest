@@ -3,6 +3,9 @@
 .filtribox {
   display: flex;
   flex-wrap: wrap;
+  @media screen and($tablet){
+    flex-direction: column;
+  }
   li {
     margin: 1rem;
     border: 2px solid $bluedark;
@@ -10,6 +13,7 @@
     font-weight: bold;
     color: $bluedark;
     transition: all ease-in-out 0.3s;
+    text-align: center;
     cursor: pointer;
     &:hover {
         border-color: $yellow;

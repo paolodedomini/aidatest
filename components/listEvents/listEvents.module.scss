@@ -11,9 +11,6 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    @media scree and($tablet){
-
-    }
   }
 }
 
@@ -46,6 +43,7 @@
   .title {
     font-size: 20px;
     flex-shrink: 1;
+    font-weight: bold;
   }
   .data {
     font-size: 20px;
