@@ -4,7 +4,7 @@ import TestoImmagine from '../components/testoImmagine/testoImmagine'
 import CallToAction from '../components/callToAction/callToAction'
 import SezioneMagazine from '../components/sezioneMagazine/sezioneMagazine'
 import { FadeInWhenVisible } from '../lib/animations'
-import Googlemaps from '../components/googlemaps/googlemaps'
+import Googlemaps from '../components/maps/googlemaps'
 import dynamic from 'next/dynamic'
 
 const HomeSwiperSlider = dynamic(() => import('../components/slider/swiperSlider'))
