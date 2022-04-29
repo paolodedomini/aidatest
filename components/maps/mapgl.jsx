@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Map, { Source, Layer } from 'react-map-gl';
-import { FaBeer } from 'react-icons/fa';
-import 'mapbox-gl/dist/mapbox-gl.css';
+
 
 const TOKEN = 'pk.eyJ1IjoicGFvbG9kZWRvbWluaSIsImEiOiJjbDJrNm44Mm4wMTk0M2xwY3FvbTBqNndmIn0.kkd8SXEw3FO1wmmytYcgLg'
 
