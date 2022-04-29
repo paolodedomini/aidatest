@@ -4,6 +4,7 @@ import TestoImmagine from '../components/testoImmagine/testoImmagine'
 import CallToAction from '../components/callToAction/callToAction'
 import SezioneMagazine from '../components/sezioneMagazine/sezioneMagazine'
 import { FadeInWhenVisible } from '../lib/animations'
+import Googlemaps from '../components/googlemaps/googlemaps'
 import dynamic from 'next/dynamic'
 
 const HomeSwiperSlider = dynamic(() => import('../components/slider/swiperSlider'))
@@ -39,6 +40,7 @@ function Home({ dataHome, menu, magazine }) {
       <FadeInWhenVisible>
         <TestoImmagine dati={datiBlocco2} />
       </FadeInWhenVisible>
+      <Googlemaps />
       <FadeInWhenVisible>
         <CallToAction
           title={datiCallToAction.title}
@@ -46,7 +48,6 @@ function Home({ dataHome, menu, magazine }) {
           textBtn={datiCallToAction.textBtn}
           linkBtn={datiCallToAction.linkBtn}
           immagine={datiCallToAction.immagine} />
-
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <TestoImmagine dati={datiBlocco5} />
