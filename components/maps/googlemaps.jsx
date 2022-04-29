@@ -1,16 +1,24 @@
 import GoogleMapReact from 'google-map-react';
 import style from './googlemaps.module.scss'
 import { useState } from 'react'
+import {motion, AnimatePresence} from 'framer-motion'
 import Image from 'next/image'
 
 function Googlemaps() {
     const [mapVisible, setMapVisible] = useState(false)
     const MapMarker = ({ text }) => <div>{text}</div>;
     return (
-        <>
+        <AnimatePresence>
             {!mapVisible ?
-                <section onMouseOver={() => setMapVisible(true)}>
-                    <div className={style.staticImageMap}>
+                <motion.section 
+                onMouseOver={() => setMapVisible(true)}
+                key="staticmap"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1  }}
+                exit={{ opacity: 0  }}
+                className={style.staticImageMap}
+                >
+                   
                         <Image
                         src="/images/map-static.jpg"
                         width={1630}
@@ -18,10 +26,16 @@ function Googlemaps() {
                         quality={85}
                         layout='intrinsic'
                         />
-                    </div>
-                </section> :
+                  
+                </motion.section> :
 
-                <section className={style.googlemap}>
+                <motion.section 
+                className={style.googlemap}
+                key="gmap"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                >
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: 'AIzaSyBQaDdCv29xQgahdFsMMLgyRjlxIU9UNyg' }}
                         defaultCenter={{
@@ -36,8 +50,8 @@ function Googlemaps() {
                             text="My Marker"
                         />
                     </GoogleMapReact>
-                </section>}
-        </>
+                </motion.section>}
+        </AnimatePresence>
     )
 }
 
