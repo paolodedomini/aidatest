@@ -12,6 +12,7 @@ function LogoHome({ menuOpen }) {
                         src="/images/logo-aida-color.png"
                         width={141}
                         height={76}
+                        alt="img"
                     />
                 </div>
                 <motion.div
@@ -21,6 +22,7 @@ function LogoHome({ menuOpen }) {
                         src="/images/logo-aida-bianco.png"
                         width={141}
                         height={76}
+                        alt="img"
                     />
                 </motion.div>
             </div>

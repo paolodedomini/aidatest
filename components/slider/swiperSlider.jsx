@@ -45,6 +45,7 @@ const HomeSwiperSlider = ({ slides }) => {
                                             blurDataURL='/images/back_main_menu.png'
                                             placeholder="blur"
                                             layout='intrinsic'
+                                            alt="img"
                                         />
                                     </div>
                                     {item.imgs.images[1] &&
@@ -57,6 +58,7 @@ const HomeSwiperSlider = ({ slides }) => {
                                                 blurDataURL='/images/back_main_menu.png'
                                                 placeholder="blur"
                                                 layout='intrinsic'
+                                                alt="img"
                                             />
                                         </div>}
                                 </div>

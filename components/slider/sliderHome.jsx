@@ -4,7 +4,7 @@ import style from './sliderHome.module.scss'
 import { BASE_URL_IMMAGINI } from '../../lib/costanti'
 import { SliderButtons } from './sliderButtons'
 import { useEffect, useState, useCallback } from 'react'
-import ClassNames from 'embla-carousel-class-names'
+import {SVGLazy} from '../../lib/animations'
 
 function SliderHome({ slides }) {
   const [emblaRef, emblaApi] = useEmblaCarousel()
@@ -43,9 +43,10 @@ function SliderHome({ slides }) {
                     src={`${BASE_URL_IMMAGINI}${item.imgs.images[0].fullPath}`}
                     width={2048}
                     height={1080}
-                    blurDataURL='/images/back_main_menu.png'
                     placeholder="blur"
                     layout='intrinsic'
+                    alt="img"
+                    blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(700, 475))}`}
                     priority
                   />
                 </div>
@@ -59,6 +60,7 @@ function SliderHome({ slides }) {
                       placeholder="blur"
                       layout='intrinsic'
                       priority
+                      alt="img"
                     />
                   </div>}
               </div>

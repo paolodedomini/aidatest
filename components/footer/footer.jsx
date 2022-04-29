@@ -9,6 +9,7 @@ function Footer({ menu }) {
           src="/images/logo-aida-color.png"
           width={200}
           height={110}
+          alt="img"
         />
       </div>
       <div className={style.footermenu}>
@@ -23,6 +24,7 @@ function Footer({ menu }) {
           src="/images/logo-unisi.jpg"
           width={112}
           height={110}
+          alt="img"
         />
       </div>
       <div className={style.info}>

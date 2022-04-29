@@ -16,6 +16,7 @@ function Navbar({ menu, menuOpen }) {
             src="/images/back_main_menu.png"
             width={819}
             height={900}
+            alt="img"
           />
         </div>
       

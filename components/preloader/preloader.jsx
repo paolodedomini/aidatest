@@ -10,6 +10,7 @@ function Preloader() {
                     src="/images/logo-aida-color.png"
                     width={141}
                     height={76}
+                    alt="img"
                 />
             </div>
             <div className={style.iconLoader}>

@@ -26,6 +26,7 @@ const MagazinePage = ({ menu, singlePost }) => {
               blurDataURL='/images/back_main_menu.png'
               placeholder="blur"
               layout='intrinsic'
+              alt="img"
             /> : <Image
               src="/images/placeholder.jpg"
               width={450}
@@ -34,6 +35,7 @@ const MagazinePage = ({ menu, singlePost }) => {
               blurDataURL='/images/back_main_menu.png'
               placeholder="blur"
               layout='intrinsic'
+              alt="img"
             />}
           </div>
           <div className={style.specs}>

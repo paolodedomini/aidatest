@@ -36,6 +36,7 @@ function Cards({ listaDatiFiltrati, style }) {
                     blurDataURL='/images/back_main_menu.png'
                     placeholder="blur"
                     layout='intrinsic'
+                    alt="img"
                   />
                 }
               </div>

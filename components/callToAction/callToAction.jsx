@@ -23,6 +23,7 @@ function CallToAction({ title, testi, textBtn, linkBtn, immagine }) {
             width={450}
             height={330}
             blurDataURL='/images/back_main_menu.png'
+            alt="img"
             placeholder="blur"
             layout='intrinsic'
           />
@@ -32,6 +33,7 @@ function CallToAction({ title, testi, textBtn, linkBtn, immagine }) {
               src="/images/footer-texture.png"
               width={450}
               height={333}
+              alt="img"
           />
         </div>
         }
