@@ -8,6 +8,7 @@ import MapBX from '../components/maps/mapgl'
 import dynamic from 'next/dynamic'
 
 const HomeSwiperSlider = dynamic(() => import('../components/slider/swiperSlider'))
+const MapBX = dynamic(()=>import('../components/maps/mapgl'))
 
 function Home({ dataHome, menu, magazine }) {
   const slidesImages = dataHome.partials[0].resources
@@ -15,7 +16,6 @@ function Home({ dataHome, menu, magazine }) {
   const datiBlocco2 = dataHome.partials[1]
   const datiBlocco3 = dataHome.partials[2]
   const datiBlocco4 = dataHome.partials[3]
-
   const datiBlocco5 = dataHome.partials[4]
   const datiBlocco6 = magazine.data
 
@@ -35,7 +35,6 @@ function Home({ dataHome, menu, magazine }) {
 
   return (
     <Layout menu={menu} home={true}>
-
       <HomeSwiperSlider slides={slides} />
       <FadeInWhenVisible>
         <TestoImmagine dati={datiBlocco2} />
