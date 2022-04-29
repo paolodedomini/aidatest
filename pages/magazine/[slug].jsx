@@ -51,10 +51,10 @@ const MagazinePage = ({ menu, singlePost }) => {
         </div>
         <div className="col-2">
           <div className={style.titoli}>
-            <h2>
+            <h1>
               <span className={style.data}>{dataPubblicazione}</span>
               {singlePost.title}
-            </h2>
+            </h1>
           </div>
           <div className={style.corpoTesto}>
             <p>

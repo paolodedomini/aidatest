@@ -20,10 +20,13 @@ a {
 * {
   box-sizing: border-box;
 }
-h2 {
+h1, h2 {
   @include titles("source-sans", 60px, $blue);
   line-height: 70px;
   margin: 0 0 1rem 0;
+  @media screen and($large){
+    font-size: 40px;
+  }
 }
 h3 {
   @include titles("source-sans", 40px, $blue);
