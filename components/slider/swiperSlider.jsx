@@ -46,12 +46,12 @@ const HomeSwiperSlider = ({ slides }) => {
                                     <div className={style.background}>
                                         <Image
                                             src={`${BASE_URL_IMMAGINI}${item.imgs.images[0].fullPath}`}
-                                            width={2048}
-                                            height={1080}
-                                            blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(2048, 1080))}`}
                                             placeholder="blur"
+                                            blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(2048, 1080))}`}
                                             layout='intrinsic'
                                             alt="img"
+                                            width={2048}
+                                            height={1080}
                                         />
                                     </div>
                                     {item.imgs.images[1] &&
