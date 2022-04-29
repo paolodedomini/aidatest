@@ -29,7 +29,7 @@ function Cards({ listaDatiFiltrati, style }) {
                   src={`${BASE_URL_IMMAGINI}${item.thumbnail?.images[0].fullPath}`}
                   width={450}
                   height={250}
-                  blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(504, 504))}`}
+                  blurDataURL="/images/placeholder-blur.jpg"
                   placeholder="blur"
                   layout='intrinsic'
                 /> :
@@ -39,7 +39,7 @@ function Cards({ listaDatiFiltrati, style }) {
                     width={450}
                     height={250}
                     quality={100}
-                    blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(504, 504))}`}
+                    blurDataURL="/images/placeholder-blur.jpg"
                     placeholder="blur"
                     layout='intrinsic'
                     alt="img"
