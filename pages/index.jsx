@@ -4,11 +4,10 @@ import TestoImmagine from '../components/testoImmagine/testoImmagine'
 import CallToAction from '../components/callToAction/callToAction'
 import SezioneMagazine from '../components/sezioneMagazine/sezioneMagazine'
 import { FadeInWhenVisible } from '../lib/animations'
-import MapBX from '../components/maps/mapgl'
 import dynamic from 'next/dynamic'
 
 const HomeSwiperSlider = dynamic(() => import('../components/slider/swiperSlider'))
-const MapBX = dynamic(()=>import('../components/maps/mapgl'))
+const MapBXD = dynamic(()=>import('../components/maps/mapgl'))
 
 function Home({ dataHome, menu, magazine }) {
   const slidesImages = dataHome.partials[0].resources
@@ -39,7 +38,7 @@ function Home({ dataHome, menu, magazine }) {
       <FadeInWhenVisible>
         <TestoImmagine dati={datiBlocco2} />
       </FadeInWhenVisible>
-      <MapBX />
+      <MapBXD />
       <FadeInWhenVisible>
         <CallToAction
           title={datiCallToAction.title}
