@@ -7,7 +7,7 @@ import { FadeInWhenVisible } from '../lib/animations'
 import dynamic from 'next/dynamic'
 
 const HomeSwiperSlider = dynamic(() => import('../components/slider/swiperSlider'))
-const MapBXD = dynamic(()=>import('../components/maps/mapgl'),   { loading: () => <p>Loading...</p> })
+const MapG = dynamic(()=>import('../components/maps/googlemaps'),   { loading: () => <p>Loading...</p> })
 
 function Home({ dataHome, menu, magazine }) {
   const slidesImages = dataHome.partials[0].resources
@@ -38,7 +38,7 @@ function Home({ dataHome, menu, magazine }) {
       <FadeInWhenVisible>
         <TestoImmagine dati={datiBlocco2} />
       </FadeInWhenVisible>
-      <MapBXD />
+      <MapG />
       <FadeInWhenVisible>
         <CallToAction
           title={datiCallToAction.title}
