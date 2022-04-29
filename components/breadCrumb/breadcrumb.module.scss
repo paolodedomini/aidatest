@@ -3,6 +3,7 @@
 .breadCrumb{
 display: flex;
 margin-left: 1rem;
+border-left: 5px solid $blue;
 a{
     font-size: 20px;
     color: $bluedark;

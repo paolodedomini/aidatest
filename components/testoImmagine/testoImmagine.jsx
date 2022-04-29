@@ -30,7 +30,7 @@ function TestoImmagine({ dati }) {
                         src={`${BASE_URL_IMMAGINI}${immagine}`}
                         width={504}
                         height={504}
-                        blurDataURL="/images/placeholder-blur.jpg"
+                        blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(504, 504))}`}
                         placeholder="blur"
                         layout='intrinsic'
                         alt="img"

@@ -2,7 +2,7 @@ import style from './navbar.module.scss'
 import Image from 'next/image'
 import { motion } from "framer-motion"
 import { aperturaMenu } from '../../lib/animations'
-
+import Link from 'next/link'
 function Navbar({ menu, menuOpen }) {
 
   return (
@@ -24,6 +24,7 @@ function Navbar({ menu, menuOpen }) {
         {Object.values(menu).map((item) => {
           return <li key={item._id}>{item.title}</li>
         })}
+        <li><Link href="/magazine">Magazine</Link></li>
       </ul>
     </motion.div>
   )
