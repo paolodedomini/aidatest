@@ -2,7 +2,7 @@ import style from './testoImmagine.module.scss';
 import { BASE_URL_IMMAGINI } from '../../lib/costanti';
 import { ReadMore } from '../ui/ui';
 import Image from 'next/image'
-import {SVGLazy} from '../../lib/animations'
+import {SVGLazy, testBase64} from '../../lib/animations'
 function TestoImmagine({ dati }) {
   
     const immagine = dati.resources[0].images[0].fullPath
@@ -23,13 +23,14 @@ function TestoImmagine({ dati }) {
                     <ReadMore />
                 </div>
             </div>
+            
             <div className="col__2">
                 <div className={style.wrapperImage}>
                     <Image
                         src={`${BASE_URL_IMMAGINI}${immagine}`}
                         width={504}
                         height={504}
-                        blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(504, 504))}`}
+                        blurDataURL={testBase64}
                         placeholder="blur"
                         layout='intrinsic'
                         alt="img"
