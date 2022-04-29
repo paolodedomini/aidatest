@@ -33,7 +33,7 @@ function Layout({ children, menu, home, router }) {
                 animate="enter" // Animated state to variants.enter
                 exit="exit" // Exit state (used later) to variants.exit
                 transition={{ type: 'linear', duration: 0.7 }} // Set the transition to linear
-              
+
             >
                 <>
                     <Header menu={menu} home={home} router={router} />
