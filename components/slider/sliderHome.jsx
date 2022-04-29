@@ -46,7 +46,7 @@ function SliderHome({ slides }) {
                     placeholder="blur"
                     layout='intrinsic'
                     alt="img"
-                    blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(700, 475))}`}
+                    blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(2048, 1080))}`}
                     priority
                   />
                 </div>

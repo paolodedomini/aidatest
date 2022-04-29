@@ -7,7 +7,7 @@ import style from './sliderHome.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Lazy } from "swiper";
 import { BASE_URL_IMMAGINI } from '../../lib/costanti'
-
+import {SVGLazy} from '../../lib/animations'
 
 const HomeSwiperSlider = ({ slides }) => {
 
@@ -17,6 +17,12 @@ const HomeSwiperSlider = ({ slides }) => {
             return '<span class="' + className + '">' + "</span>";
         },
     };
+
+    const toBase64 = (str) =>
+    typeof window === 'undefined'
+      ? Buffer.from(str).toString('base64')
+      : window.btoa(str)
+
 
     return (
         <section className='blocco_0'>
@@ -42,7 +48,7 @@ const HomeSwiperSlider = ({ slides }) => {
                                             src={`${BASE_URL_IMMAGINI}${item.imgs.images[0].fullPath}`}
                                             width={2048}
                                             height={1080}
-                                            blurDataURL='/images/back_main_menu.png'
+                                            blurDataURL={`data:image/svg+xml;base64,${toBase64(SVGLazy(2048, 1080))}`}
                                             placeholder="blur"
                                             layout='intrinsic'
                                             alt="img"
