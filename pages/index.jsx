@@ -38,7 +38,11 @@ function Home({ dataHome, menu, magazine }) {
       <FadeInWhenVisible>
         <TestoImmagine dati={datiBlocco2} />
       </FadeInWhenVisible>
-      <MapG />
+
+        <FadeInWhenVisible>
+          <MapG />
+        </FadeInWhenVisible>
+
       <FadeInWhenVisible>
         <CallToAction
           title={datiCallToAction.title}
