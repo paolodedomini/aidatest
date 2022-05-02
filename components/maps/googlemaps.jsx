@@ -1,7 +1,7 @@
 import GoogleMapReact from 'google-map-react';
 import style from './googlemaps.module.scss'
 import { useState } from 'react'
-import {motion, AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 
 function Googlemaps() {
@@ -10,31 +10,31 @@ function Googlemaps() {
     return (
         <AnimatePresence>
             {!mapVisible ?
-                <motion.section 
-                onMouseOver={() => setMapVisible(true)}
-                key="staticmap"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1  }}
-                exit={{ opacity: 0  }}
-                className={style.staticImageMap}
+                <motion.section
+                    onMouseOver={() => setMapVisible(true)}
+                    key="staticmap"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className={style.staticImageMap}
                 >
-                   
-                        <Image
+
+                    <Image
                         src="/images/map-static.jpg"
                         width={1630}
                         height={600}
                         quality={85}
                         layout='intrinsic'
-                        />
-                  
+                    />
+
                 </motion.section> :
 
-                <motion.section 
-                className={style.googlemap}
-                key="gmap"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                <motion.section
+                    className={style.googlemap}
+                    key="gmap"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                 >
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: 'AIzaSyBQaDdCv29xQgahdFsMMLgyRjlxIU9UNyg' }}

@@ -1,4 +1,4 @@
-import style from './filterEvents.module.scss'
+import style from '../liste/filterEvents.module.scss'
 import { useState, useEffect } from 'react'
 
 function FiltersEvents({ dati, setCurrrentFilter, currentFilter }) {

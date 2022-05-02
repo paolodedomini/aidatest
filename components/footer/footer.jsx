@@ -1,7 +1,7 @@
 import style from './footer.module.scss'
 import Image from 'next/image'
 function Footer({ menu }) {
-  console.log(menu);
+
   return (
     <footer>
       <div className={style.wrapperlogo}>

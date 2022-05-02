@@ -1,4 +1,4 @@
-import ListEvents from "../listEvents/listEvents"
+import ListMagazine from "./listMagazine"
 import style from './sezioneMagazine.module.scss'
 
 
@@ -15,7 +15,7 @@ function SezioneMagazine({ dati, home }) {
          <ReadMore text="Magazine" link="/magazine/" />
         </div>}
       </div>
-      <ListEvents dati={dati} />
+      <ListMagazine dati={dati} />
     </section>
   )
 }

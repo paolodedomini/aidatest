@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import style from './listEvents.module.scss'
-import FiltersEvents from './filtersEvents'
-import Lista from './lista'
-import ViewSwitcher from './viewSwitcher'
-import Cards from './cards'
+import style from './listMagazine.module.scss'
+import FiltersEvents from '../liste/filtersEvents'
+import Lista from '../liste/lista'
+import ViewSwitcher from '../liste/switcher/viewSwitcher'
+import Cards from '../liste/cards'
 import {motion, AnimatePresence} from 'framer-motion'
-function ListEvents({ dati }) {
+
+function ListMagazine({ dati }) {
   const [currentFilter, setCurrrentFilter] = useState([])
   const [listaDatiFiltrati, setListadatiFiltrati] = useState(dati)
   const [switchCard, setSwitchCard] = useState(false)
@@ -33,11 +34,11 @@ function ListEvents({ dati }) {
         {switchCard ?
         <Cards listaDatiFiltrati={listaDatiFiltrati} style={style} />
         :
-        <Lista listaDatiFiltrati={listaDatiFiltrati} style={style}/>
+        <Lista listaDatiFiltrati={listaDatiFiltrati} style={style} sezioneLista='magazine'/>
         }
       </AnimatePresence>   
       </div>
   )
 }
 
-export default ListEvents
+export default ListMagazine
